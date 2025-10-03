@@ -1,7 +1,6 @@
 stages:
   split:
-    cmd: python src/data/split_data.py --raw_path data/raw_data/raw.csv 
-      --out_dir data/processed_data --test_size 0.2 --random_state 42
+    cmd: python src/data/split_data.py
     deps:
     - data/raw_data/raw.csv
     - src/data/split_data.py
@@ -11,8 +10,7 @@ stages:
     - data/processed_data/y_test.csv
     - data/processed_data/y_train.csv
   scale:
-    cmd: python src/data/scale_data.py --in_dir data/processed_data --out_dir 
-      data/processed_data
+    cmd: python src/data/scale_data.py
     deps:
     - data/processed_data/X_test.csv
     - data/processed_data/X_train.csv
@@ -20,6 +18,7 @@ stages:
     outs:
     - data/processed_data/X_test_scaled.csv
     - data/processed_data/X_train_scaled.csv
+    - models/scaler.pkl
   grid:
     cmd: python src/models/grid_search.py
     deps:
