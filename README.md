@@ -1,3 +1,20 @@
+# Examen DVC - Modélisation Silica Concentrate
+
+**Nom** : Gille  
+**Prénom** : Sebastien  
+**Email** : sebastien.gille@gmail.com  
+**Lien vers le dépôt DagsHub** : https://dagshub.com/SebaGille/examen-dvc
+
+---
+
+Ce dépôt contient :  
+- Les scripts Python pour le workflow (split, scale, grid search, train, evaluate).  
+- Le pipeline DVC (`dvc.yaml`) avec toutes les étapes.  
+- Les données versionnées avec DVC.  
+- Le modèle entraîné (`models/model.pkl`) et les métriques (`metrics/scores.json`) disponibles dans DagsHub.
+
+
+
 # Examen DVC et Dagshub
 Dans ce dépôt vous trouverez l'architecture proposé pour mettre en place la solution de l'examen. 
 
